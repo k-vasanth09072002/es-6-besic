@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settimeout-advance-methods</title>
+</head>
+<body>
+    <script>
+        function main(){
+            setTimeout(function(){
+                console.log("1");
+                main1()
+            },3000);
+        }
+        function main1(){
+            setTimeout(function(){
+                console.log("2");
+            },1000)
+        }
+
+       
+        main(main1);
+
+    </script>
+    
+</body>
+</html>
